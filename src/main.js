@@ -1,8 +1,9 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-const controls = new OrbitControls(camera, renderer.domElement);
 
+
+let canvas = document.querySelector('#app');
 // =========================
 // SCENE
 // =========================
@@ -108,6 +109,7 @@ scene.add(bagBack);
 // =========================
 // ANIMATIE
 // =========================
+const controls = new OrbitControls(camera, canvas);
 function animate() {
   requestAnimationFrame(animate);
 
